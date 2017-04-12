@@ -19,13 +19,13 @@ experimentA <- setoutputframerate(experimentA,"susceptibles",1)
 experimentA1 <- experimentA
 experimentA1 <- setparametervalue(experimentA1,"beta",.3)
 experimentA1 <- setparametervalue(experimentA1,"gamma",.1)
-experimentplanA <- addtoexperimentplan(experimentA1)
+experimentplanA <- addtoexperimentplan(simulation = experimentA1)
 
 # Define a secod experiment on this model
 experimentA2 <- experimentA
 experimentA2 <- setparametervalue(experimentA2,"beta",.5)
 experimentA2 <- setparametervalue(experimentA2,"gamma",.10)
-experimentplanA <- addtoexperimentplan(experimentplanA,experimentA2)
+experimentplanA <- addtoexperimentplan(simulation = experimentA2,experimentplan = experimentplanA)
 
 # Execute all the exeperiments in the plan
 outputA <- runexpplan(experimentplanA,hpc = 2)
