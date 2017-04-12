@@ -1,3 +1,4 @@
+# mercredi 12 avril 2017
 getsimulationparam <- function(attrnam,dictionary)
   dictionary$Simulation$.attrs[attrnam]
 

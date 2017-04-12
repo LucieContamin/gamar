@@ -1,8 +1,5 @@
 model LVAgent
 
-
-
-
 global torus: true {
   float predation_distance_cal;
   float interacting_rate <- 0.0;
@@ -224,12 +221,8 @@ species predator schedules: shuffle(predator) { //skills: [moving]
     {
       create predator number:1;
     }
-
   }
-
 }
-
-
 
 experiment prey_predator type: gui keep_seed:true {
   init
@@ -249,24 +242,16 @@ experiment prey_predator type: gui keep_seed:true {
   parameter "danger_distance" var: danger_distance <- 5000.0 #m min:1.0 #m category: "Micro parameters";
   parameter "happiness_distance" var: happiness_distance <- 5000.0 #m min:1.0 #m category: "Micro parameters";
 
-
   parameter "simulation_id" var:simulation_id <- "0";
   parameter "currentSeed" var: currentSeed <- 131;
-
-
 
   output {
     monitor "mean_pop" value: mean_population;
     monitor "micro_b" value: micro_b;
     monitor "nb_predators" value: nb_predators;
     monitor "nb_preys" value: nb_preys;
-
-
   }
 }
-
-
-
 
 species type1 skills: [moving] {
   bool is_in_danger <- false;
@@ -282,17 +267,12 @@ species type1 skills: [moving] {
     if( nb_type2_could_kill_me >0)
     {
       is_in_danger <- true;
-
     }
   }
 }
 
 species type2 skills: [moving] {
-
   action basic_move {
     location <- any_location_in(world.shape);
   }
 }
-
-
-

@@ -7,12 +7,12 @@ getparameternames(experimentSIR)
 # called experimentA with S0=950, I0=50 and R0=0
 experimentA <- experimentSIR
 getoutputnames(experimentA)
-experimentA <- setparametervalue(experimentSIR,"S0",950)
-experimentA <- setparametervalue(experimentSIR,"I0",50)
-experimentA <- setparametervalue(experimentSIR,"R0",0)
+experimentA <- setparametervalue(experimentA,"S0",900)
+experimentA <- setparametervalue(experimentA,"I0",100)
+experimentA <- setparametervalue(experimentA,"R0",0)
 # ... and with 100 steps and a frame rate of 1 for the images of the susceptibles
-experimentA <- setfinalstep(experimentSIR,100)
-experimentA <- setoutputframerate(experimentSIR,"susceptibles",1)
+experimentA <- setfinalstep(experimentA,100)
+experimentA <- setoutputframerate(experimentA,"susceptibles",1)
 
 
 # Define a first experiment on this model

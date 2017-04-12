@@ -1,3 +1,4 @@
+# mercredi 12 avril 2017
 addoutput <- function(dictionary,name,framerate) {
   id <- length(dictionary$Simulation$Outputs)
   Output <- c("framerate"=framerate,"id"=id,"name"=name)
