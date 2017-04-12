@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.DS_Store
+R/.run.R.swp
+inst/doc
+vignettes/gamar_cache
+workgamar
+workspace
+animation.gif
