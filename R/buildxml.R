@@ -1,3 +1,4 @@
+# mercredi 12 avril 2017
 buildxmlfromexperimentplan <- function(experimentplan) {
   out <- "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><Experiment_plan>"
   i <- 1

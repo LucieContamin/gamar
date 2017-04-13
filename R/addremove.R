@@ -1,3 +1,4 @@
+# mercredi 12 avril 2017
 addoutput <- function(dictionary,name,framerate) {
   id <- length(dictionary$Simulation$Outputs)
   Output <- c("framerate"=framerate,"id"=id,"name"=name)
@@ -23,8 +24,8 @@ removeoutput <- function(dictionary,name)
 
 ################################################################################
 
-addtoexperimentplan <- function(simulation,experimentplan=list(),id = length(experimentplan)) {
-  simulation <- setsimulationid(simulation,id)
+addtoexperimentplan <- function(simulation,experimentplan=list(), id = length(experimentplan)) {
+  simulation <- setsimulationid(simulation,'id')
   experimentplan <- append(experimentplan,simulation)
   class(experimentplan) <- "plan"
   class(experimentplan[[length(experimentplan)]]) <- "experiment"
