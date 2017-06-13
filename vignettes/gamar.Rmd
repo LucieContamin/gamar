@@ -254,7 +254,7 @@ We can also generate a movie of the simulation of one experiment:
 
 ```{r}
 dir()
-makemovie(output[[1]])
+#makemovie(output[[1]])
 dir()
 ```
 

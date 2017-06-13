@@ -107,8 +107,10 @@ setoutputframerate <- function(dictionary,name,value) {
   outlist <- list()
   i <- 1
   while(i<length(siminput)+1) {
-    if(name != dictionary$Simulation$Outputs[i]$Output["name"] )
-    { dictionary$Simulation$Outputs[i]$Output["framerate"] <- value }
+    if(name == dictionary$Simulation$Outputs[i]$Output["name"] )
+    {
+      dictionary$Simulation$Outputs[i]$Output["framerate"] <- value
+    }
     i <- i + 1
   }
   dictionary
