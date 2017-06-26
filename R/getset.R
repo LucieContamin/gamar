@@ -139,7 +139,7 @@ getmodelparameter <- function(modelfile,experimentname) {
   {
     outputDisplay <-">/dev/null"
   }
-  trycommand <- system(paste0("java -jar ",getOption("gamar.startjar")," -Xms",
+  trycommand <- system(paste0("java -jar \"",getOption("gamar.startjar"),"\" -Xms",
                               getOption("gamar.Xms")," -Xmx",
                               getOption("gamar.Xmx"),
                               " -Djava.awt.headless=true org.eclipse.core.launcher.Main ",
