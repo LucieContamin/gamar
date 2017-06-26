@@ -37,7 +37,7 @@ Model file must exist :-)
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Nicolas Marilleau - UMI UMMISCO - Research Institute for the Development
 }
 \note{
 %%  ~~further notes~~

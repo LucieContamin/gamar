@@ -134,12 +134,17 @@ getdefaultexperimentplanname <- function(experimentplan)
 getmodelparameter <- function(modelfile,experimentname) {
   cat(paste0("Loading experiment '",experimentname,"' from file '",basename(modelfile),"'...\n"))
   outfile <- createmodelparameterfilename(experimentname)
+  outputDisplay <- ""
+  if(iswindows()==FALSE)
+  {
+    outputDisplay <-">/dev/null"
+  }
   trycommand <- system(paste0("java -jar ",getOption("gamar.startjar")," -Xms",
                               getOption("gamar.Xms")," -Xmx",
                               getOption("gamar.Xmx"),
                               " -Djava.awt.headless=true org.eclipse.core.launcher.Main ",
                               "-application msi.gama.headless.id4 -xml ",
-                              experimentname," ",modelfile," ",outfile,">/dev/null"),
+                              experimentname," ",modelfile," ",outfile,outputDisplay),
                        ignore.stdout=T,ignore.stderr=T)
 # removing the "workspace" directory:
   unlink("workspace",T,T)
@@ -148,6 +153,13 @@ getmodelparameter <- function(modelfile,experimentname) {
   class(out) <- c("experiment",class(out)) # adding the class
   out
 }
+
+
+iswindows <- function()
+{
+  return (Sys.info()["sysname"]=="Windows")
+}
+
 
 ################################################################################
 
