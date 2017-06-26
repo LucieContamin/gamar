@@ -79,8 +79,8 @@ startexperimentplan <- function(experimentplan,hpc=1,outputdirectory="") {
   trycommand <- system(paste0("java -jar ",getOption("gamar.startjar")," -Xms",
                               getOption("gamar.Xms")," -Xmx",getOption("gamar.Xmx"),
                               " -Djava.awt.headless=true org.eclipse.core.launcher.Main ",
-                              "-application msi.gama.headless.id4 -hpc ",hpc," ",
-                              parameterxmlfile," ",outputdirectory, outputDisplay),
+                              "-application msi.gama.headless.id4 -hpc ",hpc," \"",
+                              parameterxmlfile,"\" \"",outputdirectory,"\"", outputDisplay),
                        ignore.stdout=F,ignore.stderr=T)
 
   if(trycommand>0) return(-1)

@@ -144,7 +144,7 @@ getmodelparameter <- function(modelfile,experimentname) {
                               getOption("gamar.Xmx"),
                               " -Djava.awt.headless=true org.eclipse.core.launcher.Main ",
                               "-application msi.gama.headless.id4 -xml ",
-                              experimentname," ",modelfile," ",outfile,outputDisplay),
+                              experimentname," \"",modelfile,"\" \"",outfile,"\"",outputDisplay),
                        ignore.stdout=T,ignore.stderr=T)
 # removing the "workspace" directory:
   unlink("workspace",T,T)
